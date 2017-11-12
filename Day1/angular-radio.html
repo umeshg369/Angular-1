@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+		<script type="text/javascript" src="angular.min.js"></script>
+	</head>
+	<body ng-init="record=true ">
+		<div ng-hide="record">
+			1Lorem ipsum dolor sit amet, consectetur adipisicing elit
+		</div>
+		<div ng-show="!record">
+			2Lorem ipsum dolor sit amet, consectetur adipisicing elit
+		</div>
+		<input type="checkbox" ng-model="record">
+		<div>{{record}}</div>
+	</body>
+</html>

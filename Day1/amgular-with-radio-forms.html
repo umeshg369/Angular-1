@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+		<script type="text/javascript" src="angular.min.js"></script>
+	</head>
+	<body ng-init="xyz=1">
+		<input type="radio" ng-model="xyz" name="abc" ng-value="1">A
+		<input type="radio" ng-model="xyz" name="abc" ng-value="2">B
+		<input type="radio" ng-model="xyz" name="abc" ng-value="3">C
+
+		<div ng-if="xyz==1">LOGIn</div>
+		<div ng-if="xyz==2">Register</div>
+		<div ng-if="xyz==3">Forgot</div>
+		
+	</body>
+</html>

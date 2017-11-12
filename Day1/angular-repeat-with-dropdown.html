@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+		<script type="text/javascript" src="angular.min.js"></script>
+		<style>.bg1{background: #ccc}.bg2{background: #aaa}.bg3{background: #eee}</style>
+
+	</head>
+	<body ng-init="record=[{name:'abc',age:20},{name:'abcd',age:21},{name:'abcde',age:22}] ;  classvar='bg2' ">
+		<select ng-model="xyz">
+			<option ng-value="1">please select 1</option>
+			<option ng-value="2">please select 2</option>
+			<option ng-value="3">please select 3</option>
+		</select>
+		<select ng-model="pqr">
+			<option value="age">age ASC</option>
+			<option value="-age">age desc</option>
+		</select>
+		<select ng-model="classvar">
+			<option value="bg1">select bg1 </option>
+			<option value="bg2">select bg2 </option>
+			<option value="bg3">select bg3 </option>
+		</select>
+		<table class="table" ng-class="classvar">
+			<tr><th>Name</th><th>Age</th></tr>
+			<tr ng-repeat="answer in record|limitTo:xyz|orderBy:pqr ">
+				<td>{{answer.name}}</td>
+				<td>{{answer.age}}</td>
+			</tr>
+		</table>
+	</body>
+</html>

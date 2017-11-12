@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+		<script type="text/javascript" src="angular.min.js"></script>
+	</head>
+	<body ng-init="record=[{name:'abc',age:20},{name:'abcd',age:21},{name:'abcde',age:22}]">
+		<table class="table">
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+			</tr>
+			<tr ng-repeat="answer in record">
+				<td>{{answer.name}}</td>
+				<td>{{answer.age}}</td>
+			</tr>
+		</table>
+	</body>
+</html>

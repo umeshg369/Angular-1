@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+		<script type="text/javascript" src="angular.min.js"></script>
+
+	</head>
+	<body ng-init="record=10">
+		<!-- print => angular expression -->
+		<!-- one way binding ,two way binding , one time binding -->
+		<div>{{record}}</div>
+		<div ng-bind="record"></div>
+		<div>{{::record}}</div>
+		<input type="text" ng-model="record" />
+	</body>
+</html>
