@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="first_module">
+<head>
+	<title>Angular</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script type="text/javascript">
+		angular.module("first_module",[]).controller("ctr1", function($scope){
+			$scope.name = ["Umesh","Kishan","Pawan"];
+			$scope.testclick = function(){
+				alert("1");
+				$scope.subject = "Maths";
+			};
+			$scope.subject = "Eco";
+		});
+	</script>
+</head>
+<body ng-controller="ctr1">
+	<ul>
+		<li ng-repeat="ans in name">{{ans}}</li>
+	</ul>
+	<button ng-click="testclick();">Button</button>
+	<h2 ng-bind="subject"></h2>
+</body>
+</html>

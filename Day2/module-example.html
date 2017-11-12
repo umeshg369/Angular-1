@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="first_module">
+<head>
+	<title>Angular</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script type="text/javascript">
+		//console.log(angular);
+		appname = angular.module("first_module",[]);
+		//console.log(appname);
+		appname.run(function($rootScope){
+			console.log($rootScope);
+			$rootScope.name = "Eco";
+		});
+		appname.controller("ctr1", function($scope){
+			//console.log($scope);
+			$scope.name = "Umesh";
+			$scope.age = "25";
+			//console.log($scope.name);
+			//console.log($scope.age);
+		});
+		appname.controller("ctr2", function($scope){
+			//console.log($scope);
+			$scope.name = "Pawan";
+			$scope.age = "27";
+			//console.log($scope.name);
+			//console.log($scope.age);
+		});
+	</script>
+</head>
+<body>
+	<div ng-controller="ctr1">
+		{{name}}
+		{{age}}
+		{{::age}}
+		<input type="" ng-model="age">
+		{{subject}}
+	</div>
+	<div ng-controller="ctr2">
+		{{name}}
+		{{age}}
+		<input type="" ng-model="age">
+		{{subject}}
+	</div>
+</body>
+</html>

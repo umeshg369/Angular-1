@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="first_module">
+<head>
+	<title>Angular</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script type="text/javascript">
+		angular.module("first_module",[]).controller("ctr1", function($scope,$http){
+			//console.log($scope);
+			//console.log($http);
+			$http.get("service.php").then(function(x){
+				//console.log(x);
+				console.log(x.data);
+				$scope.answer = x.data;
+			},function(y){
+				//console.log(y);
+			});
+		});
+	</script>
+</head>
+<body ng-controller="ctr1">
+	<ul>
+		<li ng-repeat="ans in answer">{{ans}}</li>
+	</ul>
+</body>
+</html>
