@@ -1,0 +1,11 @@
+[
+	{"id":1,"name":"product 1","amount":1000,"discount":20,"catid":1,"brandid":1,"path":"1.jpg"},
+	{"id":2,"name":"product 2","amount":2000,"discount":10,"catid":1,"brandid":2,"path":"2.jpg"},
+	{"id":3,"name":"product 3","amount":2050,"discount":12,"catid":1,"brandid":3,"path":"3.jpg"},
+	{"id":4,"name":"product 9","amount":2150,"discount":17,"catid":2,"brandid":1,"path":"9.jpg"},
+	{"id":5,"name":"product 10","amount":1050,"discount":32,"catid":2,"brandid":2,"path":"10.jpg"},
+	{"id":6,"name":"product 11","amount":2550,"discount":42,"catid":2,"brandid":3,"path":"11.jpg"},
+	{"id":7,"name":"product 15","amount":8550,"discount":40,"catid":3,"brandid":1,"path":"15.jpg"},
+	{"id":8,"name":"product 16","amount":7550,"discount":25,"catid":3,"brandid":2,"path":"16.jpg"},
+	{"id":9,"name":"product 4","amount":6550,"discount":36,"catid":4,"brandid":3,"path":"4.jpg"}
+]
