@@ -1,0 +1,21 @@
+<div class="features_items">
+	<h2 class="title text-center">Features Items</h2>
+	<div class="col-sm-4" ng-repeat="ans in result | filter:final_filter_data">
+		<div class="product-image-wrapper">
+			<div class="single-products">
+					<div class="productinfo text-center">
+						<img src="images/uploads/{{ans.path}}" alt="" />
+						<h2><del>{{ans.amount}}</del> {{ans.amount - (ans.amount*ans.discount/100)}}</h2>
+						<p>{{ans.name}}</p>
+						<a href="#" ng-click="add_to_cart(ans.id)" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+					</div>
+			</div>
+			<div class="choose">
+				<ul class="nav nav-pills nav-justified">
+					<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+					<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+</div>
